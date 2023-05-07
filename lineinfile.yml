@@ -1,0 +1,8 @@
+---
+ - name: My playbook
+   hosts: papa
+   tasks:
+    - name: file module (file)
+      file: dest=/var/www/html/index.html state=touch
+    - name: lineinfile module
+      lineinfile: dest=/var/www/html/index.html line='Playbook check'
