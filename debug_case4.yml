@@ -1,4 +1,4 @@
----
+--- 
  - name: To display the usage of debug modules
    hosts: lab1
    tasks:
