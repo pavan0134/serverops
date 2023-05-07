@@ -1,0 +1,8 @@
+---
+ - name: My playbook
+   hosts: papa
+   tasks:
+    - name: file module (file)
+      file: dest=/tmp/file state=touch mode=666 owner=nisc group=nisc
+    - name: file module (dir)
+      file: dest=/tmp/dir state=directory mode=777 owner=nisc group=nisc
