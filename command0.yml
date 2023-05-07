@@ -1,0 +1,6 @@
+---
+ - name: My playbook
+   hosts: Ans-Client-30-A
+   tasks:
+    - name: shutdown
+      command: reboot
