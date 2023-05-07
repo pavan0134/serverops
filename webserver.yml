@@ -1,0 +1,12 @@
+---
+ - name: playbook
+   hosts: vara-sys30
+   tasks:
+    - name: Pkg installation
+      yum: name=httpd state=present
+    - name: file module (file)
+      file: dest=/var/www/html/index.html state=touch
+    - name: lineinfile module
+      lineinfile: dest=/var/www/html/index.html line='varains.com'
+    - name: Apache web server launch
+      service: name=httpd state=started enabled=yes
