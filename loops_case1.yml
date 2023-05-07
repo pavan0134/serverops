@@ -3,7 +3,7 @@
    hosts: papa
    tasks:
     - name: Multiple files creation with loop(item)
-      file: dest=/tmp/"{{item}}" state=touch
+      file: dest=/tmp/{{item}} state=touch
       with_items:
        - f1
        - f2
@@ -22,3 +22,4 @@
        - f1
        - f2
        - f3
+
